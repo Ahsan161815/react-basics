@@ -1,20 +1,16 @@
-import './App.css';
-import { useState, useEffect } from 'react';
+import React from "react";
 
+const APIKEY =  require('./keys.js');
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    setCount(1000);
-  }, []);
-
-  return (
-    <div className="App">
-      <button onClick={() => setCount(count - 1)}>-</button>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>+</button>
-    </div>
-  );
+    console.log(APIKEY);
+    return (
+        <>
+        <h1>My App</h1>
+        <h2>Hello</h2>
+        <h2>{APIKEY}</h2>
+        </>
+        
+    )
 }
 
 export default App;
